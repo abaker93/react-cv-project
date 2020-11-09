@@ -1,11 +1,13 @@
 @import './reset.scss';
 
+* { box-sizing: border-box; }
+
 body {
     background: linear-gradient(150deg, #7170DF 0%, #31C6DA 100%);
-    margin: 50px 200px;
+    margin: 50px;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 
 h1 {
@@ -18,14 +20,46 @@ h1 {
 h2 {
     font-size: 18px;
     font-weight: 700;
+    margin-top: 30px;
     margin-bottom: 10px;
     color: #ADB1FF;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ADB1FF;
+}
+
+a {
+    color: #7170DF;
+    text-decoration: none;
 }
 
 ul li {
     list-style: disc;
     margin-left: 30px;
     margin-bottom: 10px;
+}
+
+ol li {
+    list-style: decimal;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: linear-gradient(150deg, #0792B0 0%, #22BDB1 100%);
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 15px 40px;
 }
 
 #App {
@@ -39,6 +73,11 @@ aside#aside {
     color: #FFFFFF;
     padding: 40px;
     border-radius: 6px;
+    height: max-content;
+    max-height: 89vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 50px;
 
     header {
         display: grid;
@@ -63,6 +102,17 @@ aside#aside {
 
     }
 
+    footer {
+        margin-top: 50px;
+        border-top: 1px solid rgba(255,255,255,0.15);
+        padding-top: 20px;
+        color: rgba(255,255,255,0.5);
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+    }
+
 }
 
 main#main {
@@ -70,4 +120,57 @@ main#main {
     color: #FFFFFF;
     padding: 40px;
     border-radius: 6px;
+
+    form {
+
+        fieldset {
+            border-bottom: 1px solid #0792B0;
+            padding-bottom: 10px;
+            margin-bottom: 50px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 50px;
+
+            h3 { grid-column: 1 / 3; }
+
+            label, input, textarea {
+                display: block;
+                width: 100%;
+            }
+
+            label {
+                font-size: 12px;
+                margin-bottom: 5px;
+                color: rgba(255,255,255,0.5)
+            }
+
+            input, textarea {
+                background: none;
+                border: 1px solid rgba(255,255,255,0.15);
+                color: #FFF;
+                border-radius: 2px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+                padding: 10px 20px;
+
+                &::placeholder {
+                    color: rgba(255,255,255,0.5);
+                }
+
+            }
+
+            .buttonContainer {
+                grid-column: 1 / 3;
+                margin-bottom: 20px;
+                margin-top: 10px; 
+            }
+
+        }
+
+        #form-submit { float: right;}
+
+    }
+
 }
