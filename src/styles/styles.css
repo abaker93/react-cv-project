@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -58,156 +57,208 @@ table {
 }
 
 body {
-  background: linear-gradient(150deg, #7170DF 0%, #31C6DA 100%);
-  margin: 50px;
-  font-family: "Roboto", sans-serif;
+  font-family: priori-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: questa-grande, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #82AFB4;
 }
 
 h1 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  color: #31C6DA;
+  font-size: 50px;
 }
 
 h2 {
-  font-size: 18px;
-  font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: #ADB1FF;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+  border-top: 1px solid #82AFB4;
+  border-bottom: 2px solid #82AFB4;
   margin-bottom: 20px;
-  color: #ADB1FF;
-}
-
-a {
-  color: #7170DF;
-  text-decoration: none;
-}
-
-ul li {
-  list-style: disc;
-  margin-left: 30px;
-  margin-bottom: 10px;
-}
-
-ol li {
-  list-style: decimal;
-  margin-left: 30px;
-  margin-bottom: 10px;
-}
-
-button {
-  background: linear-gradient(150deg, #0792B0 0%, #22BDB1 100%);
-  border: none;
-  color: #FFFFFF;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 15px 40px;
 }
 
 #App {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-column-gap: 50px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-aside#aside {
-  background-color: #1A202A;
-  color: #FFFFFF;
-  padding: 40px;
-  border-radius: 6px;
-  height: max-content;
-  max-height: 89vh;
-  overflow-y: auto;
-  position: sticky;
-  top: 50px;
+#Instructions {
+  display: none;
 }
-aside#aside header {
+
+#Resume {
   display: grid;
-  grid-template-columns: 70px auto;
-  grid-column-gap: 20px;
+  grid-template-columns: 200px auto;
+}
+#Resume > * {
+  background-color: rgba(250, 249, 247, 0.9);
+}
+#Resume #Aside {
+  background-color: rgba(69, 107, 83, 0.9);
+  color: #FFFFFF;
+  padding: 30px;
+  display: grid;
+  align-content: space-between;
+  width: 200px;
+}
+#Resume #Aside #Info {
+  text-align: right;
+  width: 140px;
+  margin-bottom: 100px;
+}
+#Resume #Aside #Info .header {
+  background: #82AFB4;
+  padding: 10px 10px 10px 60px;
+  position: relative;
+  top: -30px;
+  left: -60px;
+  width: 230px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  text-align: left;
+}
+#Resume #Aside #Info #profile-photo {
+  height: 250px;
+  width: 250px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: relative;
+  top: -40px;
+}
+#Resume #Aside #Info #profile-photo:hover:before {
+  content: "edit";
+  height: 100%;
+  width: 100%;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: #000000;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+  box-sizing: border-box;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+#Resume #Aside #Info h2 {
+  border: none;
+  padding: 0;
+  color: #FFFFFF;
+  font-size: 15px;
+  margin: 0;
+  font-family: priori-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+#Resume #Aside #Info .address, #Resume #Aside #Info .phone, #Resume #Aside #Info .email {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+#Resume #Aside #Skills {
+  text-align: center;
+}
+#Resume #Aside #Skills h2 {
+  color: #FFF;
+  border-color: #FFF;
+}
+#Resume main {
+  padding: 30px;
+}
+#Resume main #Intro {
+  padding-left: 100px;
+}
+#Resume main #Intro .title {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#Resume main #Intro h2 {
+  border: none;
+  padding: 0;
+  margin-bottom: 5px;
+}
+#Resume main #Intro p {
   margin-bottom: 30px;
 }
-aside#aside header .logo {
-  height: 70px;
-}
-aside#aside header .details .company, aside#aside header .details .location {
-  display: inline;
-}
-aside#aside header .details .company:after {
-  content: "•";
-  margin: 0 7px;
-}
-aside#aside footer {
-  margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top: 20px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
+#Resume main #Education > div {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  justify-content: space-between;
-}
-
-main#main {
-  background-color: #1A202A;
-  color: #FFFFFF;
-  padding: 40px;
-  border-radius: 6px;
-}
-main#main form fieldset {
-  border-bottom: 1px solid #0792B0;
-  padding-bottom: 10px;
+  grid-template-columns: 200px auto;
+  grid-column-gap: 40px;
   margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 50px;
 }
-main#main form fieldset h3 {
-  grid-column: 1/3;
+#Resume main #Education > div:not(:last-child) {
+  border-bottom: 1px solid #82AFB4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-main#main form fieldset label, main#main form fieldset input, main#main form fieldset textarea {
-  display: block;
-  width: 100%;
-}
-main#main form fieldset label {
-  font-size: 12px;
+#Resume main #Education .education-date {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin-bottom: 5px;
-  color: rgba(255, 255, 255, 0.5);
+  text-align: right;
 }
-main#main form fieldset input, main#main form fieldset textarea {
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFF;
-  border-radius: 2px;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
+#Resume main #Education .education-degree {
+  font-weight: 700;
+  color: #456B53;
+  font-size: 18px;
+  text-align: right;
+}
+#Resume main #Education .education-school {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+}
+#Resume main #Education .education-location {
+  color: #666666;
+  font-style: italic;
+}
+#Resume main #Experience > div {
+  display: grid;
+  grid-template-columns: 200px auto;
+  grid-column-gap: 40px;
+}
+#Resume main #Experience > div:not(:last-child) {
+  border-bottom: 1px solid #82AFB4;
+  padding-bottom: 20px;
   margin-bottom: 20px;
-  padding: 10px 20px;
 }
-main#main form fieldset input::placeholder, main#main form fieldset textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+#Resume main #Experience .experience-date {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+  text-align: right;
 }
-main#main form fieldset .buttonContainer {
-  grid-column: 1/3;
-  margin-bottom: 20px;
-  margin-top: 10px;
+#Resume main #Experience .experience-title {
+  font-weight: 700;
+  color: #456B53;
+  font-size: 18px;
+  text-align: right;
 }
-main#main form #form-submit {
-  float: right;
+#Resume main #Experience .experience-company {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+}
+#Resume main #Experience .experience-location {
+  color: #666666;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=styles.css.map */
