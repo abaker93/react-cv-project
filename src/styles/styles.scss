@@ -56,6 +56,7 @@ h2 {
         display: grid;
         align-content: space-between;
         width: 200px;
+        position: relative;
 
         #Info {
             text-align: right;
@@ -84,6 +85,7 @@ h2 {
                 border-radius: 50%;
                 position: relative;
                 top: -40px;
+                z-index: 1;
 
                 &:hover {
 
@@ -142,9 +144,11 @@ h2 {
 
     main {
         padding: 30px;
+        position: relative;
 
         #Intro {
             padding-left: 100px;
+            min-height: 300px;
 
             .title {
                 font-size: 20px;
@@ -158,8 +162,8 @@ h2 {
                 margin-bottom: 5px;
             }
 
-            p {
-                margin-bottom: 30px;
+            .profile {
+                padding-bottom: 30px;
             }
 
         }
@@ -247,6 +251,46 @@ h2 {
                 font-style: italic;
             }
 
+        }
+
+    }
+
+    .edit-form {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        background-color: #82AFB4;
+        color: #FFFFFF;
+        padding: 20px;
+        width: 300px;
+        z-index: 20;
+
+        input, textarea {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: none;
+            border-radius: 0;
+            margin-bottom: 10px;
+            font-family: priori-sans, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 15px;
+            line-height: 1.4;
+            padding: 5px 10px;
+            color: #FFFFFF;
+        }
+
+        button {
+            border: none;
+            background: #FFFFFF;
+            color: #82AFB4;
+            font-family: priori-sans, sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 15px;
+            line-height: 1.4;
+            padding: 5px 20px;
         }
 
     }

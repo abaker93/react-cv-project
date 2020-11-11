@@ -111,6 +111,7 @@ h2 {
   display: grid;
   align-content: space-between;
   width: 200px;
+  position: relative;
 }
 #Resume #Aside #Info {
   text-align: right;
@@ -138,6 +139,7 @@ h2 {
   border-radius: 50%;
   position: relative;
   top: -40px;
+  z-index: 1;
 }
 #Resume #Aside #Info #profile-photo:hover:before {
   content: "edit";
@@ -180,9 +182,11 @@ h2 {
 }
 #Resume main {
   padding: 30px;
+  position: relative;
 }
 #Resume main #Intro {
   padding-left: 100px;
+  min-height: 300px;
 }
 #Resume main #Intro .title {
   font-size: 20px;
@@ -194,8 +198,8 @@ h2 {
   padding: 0;
   margin-bottom: 5px;
 }
-#Resume main #Intro p {
-  margin-bottom: 30px;
+#Resume main #Intro .profile {
+  padding-bottom: 30px;
 }
 #Resume main #Education > div {
   display: grid;
@@ -259,6 +263,42 @@ h2 {
 #Resume main #Experience .experience-location {
   color: #666666;
   font-style: italic;
+}
+#Resume .edit-form {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #82AFB4;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 300px;
+  z-index: 20;
+}
+#Resume .edit-form input, #Resume .edit-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: none;
+  border-radius: 0;
+  margin-bottom: 10px;
+  font-family: priori-sans, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 5px 10px;
+  color: #FFFFFF;
+}
+#Resume .edit-form button {
+  border: none;
+  background: #FFFFFF;
+  color: #82AFB4;
+  font-family: priori-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 5px 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
