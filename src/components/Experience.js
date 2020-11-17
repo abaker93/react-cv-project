@@ -1,6 +1,20 @@
 import React, { Component } from "react";
 
 class Experience extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            edit: false
+        };
+    }
+
+    toggleEdit = () => {
+        this.setState(prevState => ({
+            edit: !prevState.edit
+        }))
+    }
+
     render() {
         return (
             <div id="Experience">
@@ -27,6 +41,13 @@ class Experience extends Component {
                         <p class="experience-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
+                <button
+                    className="edit-toggle"
+                    type="button"
+                    onClick={this.toggleEdit}
+                >
+                    Edit
+                </button>
             </div>
         )
     }

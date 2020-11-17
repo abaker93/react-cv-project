@@ -83,6 +83,25 @@ h2 {
   margin-bottom: 20px;
 }
 
+button {
+  border: none;
+  background: #82AFB4;
+  color: #FFFFFF;
+  font-family: priori-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 1.4;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+button.edit-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 #App {
   width: 1000px;
   margin: 0 auto;
@@ -187,6 +206,7 @@ h2 {
 #Resume main #Intro {
   padding-left: 100px;
   min-height: 300px;
+  position: relative;
 }
 #Resume main #Intro .title {
   font-size: 20px;
@@ -201,6 +221,15 @@ h2 {
 #Resume main #Intro .profile {
   padding-bottom: 30px;
 }
+#Resume main #Intro .edit-toggle {
+  display: none;
+}
+#Resume main #Intro:hover .edit-toggle {
+  display: block;
+}
+#Resume main #Education {
+  position: relative;
+}
 #Resume main #Education > div {
   display: grid;
   grid-template-columns: 200px auto;
@@ -208,7 +237,6 @@ h2 {
   margin-bottom: 50px;
 }
 #Resume main #Education > div:not(:last-child) {
-  border-bottom: 1px solid #82AFB4;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -233,13 +261,22 @@ h2 {
   color: #666666;
   font-style: italic;
 }
+#Resume main #Education .edit-toggle {
+  display: none;
+  top: 60px;
+}
+#Resume main #Education:hover .edit-toggle {
+  display: block;
+}
+#Resume main #Experience {
+  position: relative;
+}
 #Resume main #Experience > div {
   display: grid;
   grid-template-columns: 200px auto;
   grid-column-gap: 40px;
 }
 #Resume main #Experience > div:not(:last-child) {
-  border-bottom: 1px solid #82AFB4;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
@@ -264,7 +301,15 @@ h2 {
   color: #666666;
   font-style: italic;
 }
-#Resume .edit-form {
+#Resume main #Experience .edit-toggle {
+  display: none;
+  top: 60px;
+}
+#Resume main #Experience:hover .edit-toggle {
+  display: block;
+}
+
+.edit-form {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -274,7 +319,7 @@ h2 {
   width: 300px;
   z-index: 20;
 }
-#Resume .edit-form input, #Resume .edit-form textarea {
+.edit-form input, .edit-form textarea {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: none;
@@ -288,17 +333,9 @@ h2 {
   padding: 5px 10px;
   color: #FFFFFF;
 }
-#Resume .edit-form button {
-  border: none;
-  background: #FFFFFF;
+.edit-form button {
+  background-color: #FFFFFF;
   color: #82AFB4;
-  font-family: priori-sans, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: 15px;
-  line-height: 1.4;
-  padding: 5px 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

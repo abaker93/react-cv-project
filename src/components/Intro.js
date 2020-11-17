@@ -9,7 +9,7 @@ class Intro extends Component {
             title: '',
             profile: '',
             edit: false
-        };;
+        };
     }
 
     handleNameChange = e => {
@@ -37,34 +37,49 @@ class Intro extends Component {
     }
 
     render() {
-        const { name, title, profile } = this.state;
+        const { name, title, profile, edit } = this.state;
 
         return (
             <div id="Intro">
                 <h1>{name ? name : 'Your name'}</h1>
-                <p class="title">{title ? title : 'Your title'}</p>
+                <p className="title">{title ? title : 'Your title'}</p>
                 <h2>Profile</h2>
-                <p class="profile">{profile ? profile : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}</p>
-                <form id="intro-edit" class="edit-form">
-                    <label for="name">Your name</label>
-                    <input
-                        id="name"
-                        type="text"
-                        onChange={this.handleNameChange}
-                    />
-                    <label for="title">Your title</label>
-                    <input
-                        id="title"
-                        type="text"
-                        onChange={this.handleTitleChange}
-                    />
-                    <label for="profile">Profile</label>
-                    <textarea
-                        id="profile"
-                        onChange={this.handleProfileChange}
-                    />
-                    <button type="button" onClick={this.toggleEdit}>Close Edit</button>
-                </form>
+                <p className="profile">{profile ? profile : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}</p>
+                <button
+                    className="edit-toggle"
+                    type="button"
+                    onClick={this.toggleEdit}
+                >
+                    Edit
+                </button>
+                
+                {edit &&
+                    <form id="intro-edit" className="edit-form">
+                        <label for="name">Your name</label>
+                        <input
+                            id="name"
+                            type="text"
+                            onChange={this.handleNameChange}
+                        />
+                        <label for="title">Your title</label>
+                        <input
+                            id="title"
+                            type="text"
+                            onChange={this.handleTitleChange}
+                        />
+                        <label for="profile">Profile</label>
+                        <textarea
+                            id="profile"
+                            onChange={this.handleProfileChange}
+                        />
+                        <button
+                            type="button"
+                            onClick={this.toggleEdit}
+                        >
+                            Close Edit
+                        </button>
+                    </form>
+                }
             </div>
         )
     }
