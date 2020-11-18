@@ -90,6 +90,8 @@ class Education extends Component {
             minor: '',
             gpa: ''
         })
+
+        this.toggleEdit()
     }
 
     toggleEdit = () => {
@@ -148,70 +150,70 @@ class Education extends Component {
 
                 {edit &&
                     <form id="education-add" className="edit-form">
-                    <label htmlFor="school">School</label>
-                    <input
-                        id="school"
-                        type="text"
-                        value={school}
-                        onChange={this.handleSchoolChange}
-                    />
-                    <label htmlFor="degree">Degree</label>
-                    <input
-                        id="degree"
-                        type="text"
-                        value={degree}
-                        onChange={this.handleDegreeChange}
-                    />
-                    <label htmlFor="start-date">Start Date</label>
-                    <input
-                        id="start-date"
-                        type="text"
-                        value={startDate}
-                        placeholder="Month &amp; Year"
-                        onChange={this.handleStartDateChange}
-                    />
-                    <label htmlFor="end-date">End Date</label>
-                    <input
-                        id="end-date"
-                        type="text"
-                        value={endDate}
-                        placeholder="Month &amp; Year"
-                        onChange={this.handleEndDateChange}
-                    />
-                    <label htmlFor="location">Location</label>
-                    <input
-                        id="location"
-                        type="text"
-                        value={location}
-                        onChange={this.handleLocationChange}
-                    />
-                    <label htmlFor="minor">Minor</label>
-                    <input
-                        id="minor"
-                        type="text"
-                        value={minor}
-                        onChange={this.handleMinorChange}
-                    />
-                    <label htmlFor="gpa">GPA</label>
-                    <input
-                        id="gpa"
-                        type="text"
-                        value={gpa}
-                        onChange={this.handleGPAChange}
-                    />
-                    <button
-                        type="button"
-                        onClick={this.onSubmitEducation}
-                    >
-                        Add Education
-                    </button>
-                    <button
-                        type="button"
-                        onClick={this.toggleEdit}
-                    >
-                        Close
-                    </button>
-                </form>
+                        <label htmlFor="school">School</label>
+                        <input
+                            id="school"
+                            type="text"
+                            value={school}
+                            onChange={this.handleSchoolChange}
+                        />
+                        <label htmlFor="degree">Degree</label>
+                        <input
+                            id="degree"
+                            type="text"
+                            value={degree}
+                            onChange={this.handleDegreeChange}
+                        />
+                        <label htmlFor="start-date">Start Date</label>
+                        <input
+                            id="start-date"
+                            type="text"
+                            value={startDate}
+                            placeholder="Month &amp; Year"
+                            onChange={this.handleStartDateChange}
+                        />
+                        <label htmlFor="end-date">End Date</label>
+                        <input
+                            id="end-date"
+                            type="text"
+                            value={endDate}
+                            placeholder="Month &amp; Year"
+                            onChange={this.handleEndDateChange}
+                        />
+                        <label htmlFor="location">Location</label>
+                        <input
+                            id="location"
+                            type="text"
+                            value={location}
+                            onChange={this.handleLocationChange}
+                        />
+                        <label htmlFor="minor">Minor</label>
+                        <input
+                            id="minor"
+                            type="text"
+                            value={minor}
+                            onChange={this.handleMinorChange}
+                        />
+                        <label htmlFor="gpa">GPA</label>
+                        <input
+                            id="gpa"
+                            type="text"
+                            value={gpa}
+                            onChange={this.handleGPAChange}
+                        />
+                        <button
+                            type="button"
+                            onClick={this.onSubmitEducation}
+                        >
+                            Add Education
+                        </button>
+                        <button
+                            type="button"
+                            onClick={this.toggleEdit}
+                        >
+                            Close
+                        </button>
+                    </form>
                 }
             </div>
         )
