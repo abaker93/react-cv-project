@@ -14,19 +14,19 @@ class Intro extends Component {
 
     handleNameChange = e => {
         this.setState({
-            name: e.target.value,
+            name: e.target.value
         })
     }
 
     handleTitleChange = e => {
         this.setState({
-            title: e.target.value,
+            title: e.target.value
         })
     }
 
     handleProfileChange = e => {
         this.setState({
-            profile: e.target.value,
+            profile: e.target.value
         })
     }
 
@@ -55,19 +55,19 @@ class Intro extends Component {
                 
                 {edit &&
                     <form id="intro-edit" className="edit-form">
-                        <label for="name">Your name</label>
+                        <label htmlFor="name">Your name</label>
                         <input
                             id="name"
                             type="text"
                             onChange={this.handleNameChange}
                         />
-                        <label for="title">Your title</label>
+                        <label htmlFor="title">Your title</label>
                         <input
                             id="title"
                             type="text"
                             onChange={this.handleTitleChange}
                         />
-                        <label for="profile">Profile</label>
+                        <label htmlFor="profile">Profile</label>
                         <textarea
                             id="profile"
                             onChange={this.handleProfileChange}

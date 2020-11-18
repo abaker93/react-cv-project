@@ -83,6 +83,7 @@ button {
             text-align: right;
             width: 140px;
             margin-bottom: 100px;
+            position: relative;
 
             .header {
                 background: #82AFB4;
@@ -149,6 +150,20 @@ button {
                 margin-bottom: 5px;
             }
 
+            .edit-form {
+                top: 300px;
+                left: 0;
+                text-align: left;
+            }
+
+            .edit-toggle {
+                display: none;
+                top: 300px;
+                left: 0;
+            }
+
+            &:hover .edit-toggle { display: block; }
+
         }
 
         #Skills {
@@ -187,6 +202,8 @@ button {
             .profile {
                 padding-bottom: 30px;
             }
+
+            .edit-form { top: 0; }
 
             .edit-toggle { display: none; }
 

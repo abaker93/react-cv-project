@@ -137,6 +137,7 @@ button.edit-toggle {
   text-align: right;
   width: 140px;
   margin-bottom: 100px;
+  position: relative;
 }
 #Resume #Aside #Info .header {
   background: #82AFB4;
@@ -193,6 +194,19 @@ button.edit-toggle {
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
+#Resume #Aside #Info .edit-form {
+  top: 300px;
+  left: 0;
+  text-align: left;
+}
+#Resume #Aside #Info .edit-toggle {
+  display: none;
+  top: 300px;
+  left: 0;
+}
+#Resume #Aside #Info:hover .edit-toggle {
+  display: block;
+}
 #Resume #Aside #Skills {
   text-align: center;
 }
@@ -221,6 +235,9 @@ button.edit-toggle {
 }
 #Resume main #Intro .profile {
   padding-bottom: 30px;
+}
+#Resume main #Intro .edit-form {
+  top: 0;
 }
 #Resume main #Intro .edit-toggle {
   display: none;
