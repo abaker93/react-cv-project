@@ -94,6 +94,7 @@ button {
   font-size: 15px;
   line-height: 1.4;
   padding: 5px 20px;
+  margin-right: 15px;
   cursor: pointer;
 }
 button.edit-toggle {
@@ -229,6 +230,7 @@ button.edit-toggle {
 }
 #Resume main #Education {
   position: relative;
+  min-height: 100px;
 }
 #Resume main #Education > div {
   display: grid;
@@ -311,8 +313,8 @@ button.edit-toggle {
 
 .edit-form {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 60px;
+  right: 0;
   background-color: #82AFB4;
   color: #FFFFFF;
   padding: 20px;

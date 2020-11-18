@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import uniqid from 'uniqid';
 
 class Education extends Component {
     constructor() {
@@ -14,6 +15,7 @@ class Education extends Component {
             gpa: '',
             education: [
                 {
+                    id: uniqid(),
                     school: 'Cool University',
                     degree: 'B.S. Web Development',
                     date: 'Aug 2019 - July 2020',
@@ -72,13 +74,21 @@ class Education extends Component {
         e.preventDefault();
         this.setState({
             education: this.state.education.concat({
+                id: uniqid(),
                 school: this.state.school,
                 degree: this.state.degree,
                 date: this.state.startDate + ' - ' + this.state.endDate,
                 location: this.state.location,
                 minor: this.state.minor,
                 gpa: this.state.gpa
-            })
+            }),
+            school: '',
+            degree: '',
+            startDate: '',
+            endDate: '',
+            location: '',
+            minor: '',
+            gpa: ''
         })
     }
 
@@ -88,15 +98,33 @@ class Education extends Component {
         }))
     }
 
+    handleRemove = key => {
+        const newEdu = this.state.education.filter(education => education.id !== key)
+
+        this.setState({
+            education: newEdu
+        })
+    }
+
     render() {
-        const { edit, education } = this.state;
+        const {
+            school,
+            degree,
+            startDate,
+            endDate,
+            location,
+            minor,
+            gpa,
+            education,
+            edit
+        } = this.state;
         
         return (
             <div id="Education">
                 <h2>Education</h2>
                 {education.map(edu => {
                     return (
-                        <div>
+                        <div key={edu.id} onClick={() => this.handleRemove(edu.id)}>
                             <div>
                                 <p className="education-date">{edu.date}</p>
                                 <p className="education-degree">{edu.degree}</p>
@@ -120,48 +148,55 @@ class Education extends Component {
 
                 {edit &&
                     <form id="education-add" className="edit-form">
-                    <label for="school">School</label>
+                    <label htmlFor="school">School</label>
                     <input
                         id="school"
                         type="text"
+                        value={school}
                         onChange={this.handleSchoolChange}
                     />
-                    <label for="degree">Degree</label>
+                    <label htmlFor="degree">Degree</label>
                     <input
                         id="degree"
                         type="text"
+                        value={degree}
                         onChange={this.handleDegreeChange}
                     />
-                    <label for="start-date">Start Date</label>
+                    <label htmlFor="start-date">Start Date</label>
                     <input
                         id="start-date"
                         type="text"
+                        value={startDate}
                         placeholder="Month &amp; Year"
                         onChange={this.handleStartDateChange}
                     />
-                    <label for="end-date">End Date</label>
+                    <label htmlFor="end-date">End Date</label>
                     <input
                         id="end-date"
                         type="text"
+                        value={endDate}
                         placeholder="Month &amp; Year"
                         onChange={this.handleEndDateChange}
                     />
-                    <label for="location">Location</label>
+                    <label htmlFor="location">Location</label>
                     <input
                         id="location"
                         type="text"
+                        value={location}
                         onChange={this.handleLocationChange}
                     />
-                    <label for="minor">Minor</label>
+                    <label htmlFor="minor">Minor</label>
                     <input
                         id="minor"
                         type="text"
+                        value={minor}
                         onChange={this.handleMinorChange}
                     />
-                    <label for="gpa">GPA</label>
+                    <label htmlFor="gpa">GPA</label>
                     <input
                         id="gpa"
                         type="text"
+                        value={gpa}
                         onChange={this.handleGPAChange}
                     />
                     <button
@@ -174,7 +209,7 @@ class Education extends Component {
                         type="button"
                         onClick={this.toggleEdit}
                     >
-                        Close Add
+                        Close
                     </button>
                 </form>
                 }
