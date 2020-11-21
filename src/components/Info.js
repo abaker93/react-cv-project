@@ -92,22 +92,43 @@ class Info extends Component {
 
                 {edit &&
                     <form id="intro-edit" className="edit-form">
-                        <label htmlFor="name">Your name</label>
+                        <label htmlFor="address1">Address</label>
                         <input
-                            id="name"
+                            id="address1"
                             type="text"
-                            onChange={this.handleNameChange}
+                            placeholder="123 Address St"
+                            onChange={this.handleAddress1Change}
                         />
-                        <label htmlFor="title">Your title</label>
+                        <label htmlFor="address2">City, State, & Zip Code</label>
                         <input
-                            id="title"
+                            id="address2"
                             type="text"
-                            onChange={this.handleTitleChange}
+                            placeholder="City, ST 55555"
+                            onChange={this.handleAddress2Change}
                         />
-                        <label htmlFor="profile">Profile</label>
-                        <textarea
-                            id="profile"
-                            onChange={this.handleProfileChange}
+                        <label htmlFor="phone">Phone</label>
+                        <input
+                            id="phone"
+                            type="text"
+                            onChange={this.handlePhoneChange}
+                        />
+                        <label htmlFor="email">Email</label>
+                        <input
+                            id="email"
+                            type="text"
+                            onChange={this.handleEmailChange}
+                        />
+                        <label htmlFor="website">Website</label>
+                        <input
+                            id="website"
+                            type="text"
+                            onChange={this.handleWebsiteChange}
+                        />
+                        <label htmlFor="linkedin">LinkedIn Username</label>
+                        <input
+                            id="linkedin"
+                            type="text"
+                            onChange={this.handleLinkedinChange}
                         />
                         <button
                             type="button"
