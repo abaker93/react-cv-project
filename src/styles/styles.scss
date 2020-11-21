@@ -61,7 +61,44 @@ button {
 }
 
 #Instructions {
-    // display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(250, 249, 247, 0.9);
+    top: 0;
+    left: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    .container {
+        background-color: #82AFB4;
+        width: 600px;
+        padding: 50px;
+    }
+
+    h2 {
+        color: #FFFFFF;
+        border-color: #FFFFFF;
+    }
+
+    ul {
+        margin-bottom: 20px;
+
+        li {
+            list-style: decimal;
+            margin-left: 20px;
+        }
+
+    }
+
+    button {
+        background-color: #FFFFFF;
+        color: #82AFB4;
+    }
 }
 
 #Resume {

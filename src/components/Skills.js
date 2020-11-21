@@ -54,7 +54,10 @@ class Skills extends Component {
     onSubmitSkill = e => {
         e.preventDefault();
         this.setState({
-            skills: this.state.skills.concat(this.state.skill),
+            skills: this.state.skills.concat({
+                id: uniqid(),
+                skill: this.state.skill
+            }),
             skill: ''
         })
 
@@ -112,7 +115,7 @@ class Skills extends Component {
                         />
                         <button
                             type="button"
-                            onClick={this.onSubmitExperience}
+                            onClick={this.onSubmitSkill}
                         >
                             Add Experience
                         </button>
