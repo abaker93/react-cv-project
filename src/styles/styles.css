@@ -113,10 +113,6 @@ button.edit-toggle {
   background-position: center;
 }
 
-#Instructions {
-  display: none;
-}
-
 #Resume {
   display: grid;
   grid-template-columns: 200px auto;
