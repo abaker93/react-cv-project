@@ -154,7 +154,6 @@ button.edit-toggle {
 #Resume #Aside #Info #profile-photo {
   height: 250px;
   width: 250px;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -209,10 +208,24 @@ button.edit-toggle {
 }
 #Resume #Aside #Skills {
   text-align: center;
+  position: relative;
 }
 #Resume #Aside #Skills h2 {
   color: #FFF;
   border-color: #FFF;
+}
+#Resume #Aside #Skills .edit-form {
+  top: 60px;
+  left: 0;
+  text-align: left;
+}
+#Resume #Aside #Skills .edit-toggle {
+  display: none;
+  top: 60px;
+  left: 0;
+}
+#Resume #Aside #Skills:hover .edit-toggle {
+  display: block;
 }
 #Resume main {
   padding: 30px;

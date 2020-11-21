@@ -5,14 +5,22 @@ class Info extends Component {
         super();
 
         this.state = {
+            photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
             address1: '',
             address2: '',
             phone: '',
             email: '',
             website: '',
             linkedin: '',
-            edit: false
+            edit: false,
+            editPhoto: false
         }
+    }
+
+    handlePhotoChange = e => {
+        this.setState({
+            photo: e.target.value
+        })
     }
 
     handleAddress1Change = e => {
@@ -57,13 +65,37 @@ class Info extends Component {
         }))
     }
 
+    toggleEditPhoto = () => {
+        this.setState(prevState => ({
+            editPhoto: !prevState.editPhoto
+        }))
+    }
+
     render() {
-        const { address1, address2, phone, email, website, linkedin, edit } = this.state;
+        const {
+            photo,
+            address1,
+            address2,
+            phone,
+            email,
+            website,
+            linkedin,
+            edit,
+            editPhoto
+        } = this.state;
+
+        var profilePhoto = {
+            backgroundImage: 'url(' + photo + ')'
+        }
 
         return (
             <div id="Info">
                 <div className="header">Resume</div>
-                <div id="profile-photo" />
+                <div
+                    id="profile-photo"
+                    style={profilePhoto}
+                    onClick={this.toggleEditPhoto}
+                />
                 <div className="address">
                     <h2>Address</h2>
                     <p>{address1 ? address1 : '123 Address St'}</p>
@@ -133,6 +165,23 @@ class Info extends Component {
                         <button
                             type="button"
                             onClick={this.toggleEdit}
+                        >
+                            Close Edit
+                        </button>
+                    </form>
+                }
+
+                {editPhoto &&
+                    <form id="photo-edit" className="edit-form">
+                        <label htmlFor="photo">Photo URL</label>
+                        <input
+                            id="photo"
+                            type="text"
+                            onChange={this.handlePhotoChange}
+                        />
+                        <button
+                            type="button"
+                            onClick={this.toggleEditPhoto}
                         >
                             Close Edit
                         </button>

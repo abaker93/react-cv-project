@@ -101,7 +101,6 @@ button {
             #profile-photo {
                 height: 250px;
                 width: 250px;
-                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU');
                 background-size: cover;
                 background-position: center;
                 border-radius: 50%;
@@ -168,11 +167,26 @@ button {
 
         #Skills {
             text-align: center;
+            position: relative;
 
             h2 {
                 color: #FFF;
                 border-color: #FFF;
             }
+
+            .edit-form {
+                top: 60px;
+                left: 0;
+                text-align: left;
+            }
+
+            .edit-toggle {
+                display: none;
+                top: 60px;
+                left: 0;
+            }
+
+            &:hover .edit-toggle { display: block; }
 
         }
 

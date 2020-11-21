@@ -141,7 +141,7 @@ class Experience extends Component {
                     type="button"
                     onClick={this.toggleEdit}
                 >
-                    Edit
+                    Add
                 </button>
 
                 {edit &&
